@@ -69,3 +69,28 @@ e con il while */
 
 // console.log(number);
 // console.log(somma);
+
+/* 1-4 In un array sono contenuti i nomi degli invitati alla festa del
+grande Gatsby, chiedi all’utente il suo nome e comunicagli se
+può partecipare o no alla festa. */
+
+// let listaInvitati = ['Ciccio', 'Baruffo', 'Bogdan'];
+
+// let nomeUtente = prompt('Buona sera!, mi dia il suo nome gentilmente')
+
+// console.log(listaInvitati);
+// console.log(nomeUtente);
+
+
+// for (let a = 0; a < listaInvitati.length; a++) {
+    
+//     if (nomeUtente == listaInvitati[a]) {
+//         console.log(`Salve ${nomeUtente}, è il benvenuto`);
+//     } else {
+//         console.log('Lei non è presente nella lista, mi dispiace');
+//     }
+// };
+
+/* Crea un array vuoto
+Chiedi per 6 volte all’utente di inserire un numero, se è
+dispari inseriscilo nell’array */
