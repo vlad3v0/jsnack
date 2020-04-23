@@ -94,3 +94,23 @@ può partecipare o no alla festa. */
 /* Crea un array vuoto
 Chiedi per 6 volte all’utente di inserire un numero, se è
 dispari inseriscilo nell’array */
+
+// let box= [];
+// let numeriUtente;
+
+// for (let a = 0; a < 6; a++) {
+//     let numeriUtente = +prompt('Inserisci 6 numeri');
+
+//     if (numeriUtente % 2 == 0) {
+
+//         box.push(numeriUtente);
+
+//     } else {
+        
+//         console.log('numero dispari');
+
+//     }
+    
+// }
+
+// console.log(box);
