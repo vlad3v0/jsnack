@@ -141,78 +141,87 @@ dispari inseriscilo nell’array */
 
 // checkPalindrome(word, wordReverse);
 
-//  Creare funzione che genera un numero casuale tra un input minimo e uno massimo
-function generatoreRandom(min, max) {
-    return Math.floor(Math.random () * (max-min +1) +min );
+/* L'utente sceglie un numero da 1 a 5. 
+Generiamo un numero pari o dispari e un numero random per il computer e
+dichiariamo chi ha vinto
+*/
+
+// //  Creare funzione che genera un numero casuale tra un input minimo e uno massimo
+// function generatoreRandom(min, max) {
+//     return Math.floor(Math.random () * (max-min +1) +min );
+// }
+// //console.log(numeroRandom);
+
+// // Creare funzione che stabilisce pari o dispari
   
-  }
-  //console.log(numeroRandom);
+// function giocata(n) {
+
+//     console.log(n);
+        
+//     var pari = false;
+      
+//     if (n % 2 == 0) {
+      
+//         var pari = true;
+//     } 
+//     return pari;
+        
+// }
+// //console.log(giocata);
   
-  var playerParioDisp = prompt("Scegli pari o dispari");
+//   var sceltaPariDispari = prompt("Scegli pari o dispari");
+//   var playerNumber = parseInt(prompt("Scegli un numero tra 1 e 5"));
+//   document.writeln( "Numero inserito player: " + playerNumber + "<br>");
   
-  var playerNumber = parseInt(prompt("Scegli un numero tra 1 e 5"));
-  document.writeln( "Numero inserito player: " + playerNumber + "<br>");
+
+//   // Stampare a schermo la scelta dell'utente tra pari e dispari
   
-  // Creare funzione che stabilisce pari o dispari
+//   if (sceltaPariDispari == "pari") {
   
-  function giocata(number) {
-  
-    var pari = true;
-  
-    if (number % 2 != 0) {
-  
-      var pari = false;
-    }
-    return pari;
+//     var sceltaUtente = true;
+//     // console.log('pari');
     
-  }
-  //console.log(giocata);
-  // Stampare a schermo la scelta dell'utente tra pari e dispari
+//     document.writeln("Il player ha scelto: Pari" + "<br>")
   
-  if (giocata === "pari") {
+//   }
+//   else if (sceltaPariDispari == "dispari"){
   
-    var pari = true;
-    console.log('pari');
+//     var sceltaUtente = false;
+//     // console.log('dispari');
     
-    document.writeln("Il player ha scelto: Pari" + "<br>")
+//     document.writeln("Il player ha scelto: Dispari" + "<br>")
   
-  }
-  else if (giocata === "dispari"){
+//   }
+//   else {
   
-    var dispari = false;2
-    console.log('dispari');
-    
-    document.writeln("Il player ha scelto: Dispari" + "<br>")
+//     document.writeln("Il Player non ha inserito corretamente i dati" + "<br>");
   
-  }
-  else {
+//   }
   
-    document.writeln("Il Player non ha inserito corretamente i dati" + "<br>");
+//   // Riutilizzare la funzione per scegliere a caso un numero da 1 a 5 per il CPU
   
-  }
+//   var cpuNumber = generatoreRandom(1, 5);
+//   document.writeln('Numero Random CPU è: ' + cpuNumber + "<br>");
   
-  
-  // Riutilizzare la funzione per scegliere a caso un numero da 1 a 5 per il CPU
-  
-  var cpuNumber = generatoreRandom(1, 5);
-  document.writeln('Numero Random CPU è: ' + cpuNumber + "<br>");
+//   var somma = playerNumber + cpuNumber;
+//   console.log(somma);
   
   
+//   var sommacheck = giocata(somma);
+
+// //   console.log(sommacheck);
+// //   console.log(sceltaUtente);
+// //   console.log(sceltaPariDispari);
   
-  var somma = playerNumber + cpuNumber;
-  //console.log(somma);
+// // Result
   
+//   if (sommacheck === sceltaUtente) {
   
-  var sommacheck = giocata(somma);
-  //console.log(sommacheck);
+//     document.writeln("Hai vinto!!!");
   
-  if (sommacheck === true) {
+//   }
+//   else {
   
-    document.writeln("Hai vinto!!!");
-  
-  }
-  else {
-  
-    document.writeln("Hai perso!!!");
-  }
+//     document.writeln("Hai perso!!!");
+//   }
   
