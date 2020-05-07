@@ -114,3 +114,105 @@ dispari inseriscilo nell’array */
 // }
 
 // console.log(box);
+
+/* una funzione per capire se la parola è palidroma */
+
+// let word = prompt('Inserisci una parola palindrima', '').toLowerCase();
+// let wordReverse = '';
+
+// console.log(word);
+
+// function checkPalindrome(word, wordReverse) {
+    
+//     for (let i = word.length -1; i >= 0; i--) {
+//         wordReverse = wordReverse + word[i];
+//         console.log(word[i]);
+        
+//     }
+//     console.log(wordReverse);
+
+//     if (word == wordReverse) {
+//         document.writeln('E\' una parola palindroma')
+//     } else {
+//         document.writeln('Non è una parola palindroma')
+//     }
+    
+// }
+
+// checkPalindrome(word, wordReverse);
+
+//  Creare funzione che genera un numero casuale tra un input minimo e uno massimo
+function generatoreRandom(min, max) {
+    return Math.floor(Math.random () * (max-min +1) +min );
+  
+  }
+  //console.log(numeroRandom);
+  
+  var playerParioDisp = prompt("Scegli pari o dispari");
+  
+  var playerNumber = parseInt(prompt("Scegli un numero tra 1 e 5"));
+  document.writeln( "Numero inserito player: " + playerNumber + "<br>");
+  
+  // Creare funzione che stabilisce pari o dispari
+  
+  function giocata(number) {
+  
+    var pari = true;
+  
+    if (number % 2 != 0) {
+  
+      var pari = false;
+    }
+    return pari;
+    
+  }
+  //console.log(giocata);
+  // Stampare a schermo la scelta dell'utente tra pari e dispari
+  
+  if (giocata === "pari") {
+  
+    var pari = true;
+    console.log('pari');
+    
+    document.writeln("Il player ha scelto: Pari" + "<br>")
+  
+  }
+  else if (giocata === "dispari"){
+  
+    var dispari = false;2
+    console.log('dispari');
+    
+    document.writeln("Il player ha scelto: Dispari" + "<br>")
+  
+  }
+  else {
+  
+    document.writeln("Il Player non ha inserito corretamente i dati" + "<br>");
+  
+  }
+  
+  
+  // Riutilizzare la funzione per scegliere a caso un numero da 1 a 5 per il CPU
+  
+  var cpuNumber = generatoreRandom(1, 5);
+  document.writeln('Numero Random CPU è: ' + cpuNumber + "<br>");
+  
+  
+  
+  var somma = playerNumber + cpuNumber;
+  //console.log(somma);
+  
+  
+  var sommacheck = giocata(somma);
+  //console.log(sommacheck);
+  
+  if (sommacheck === true) {
+  
+    document.writeln("Hai vinto!!!");
+  
+  }
+  else {
+  
+    document.writeln("Hai perso!!!");
+  }
+  
