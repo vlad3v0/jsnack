@@ -224,4 +224,139 @@ dichiariamo chi ha vinto
   
 //     document.writeln("Hai perso!!!");
 //   }
-  
+
+
+/* Inserisci un numero, se è pari stampa il numero, se è dispari stampa
+il numero successivo */
+
+// let n = +prompt('inserisci un numero ! ');
+
+// function printResult(n) {
+
+//     var result = n;
+//     if (n % 2 == 0) {
+//         document.write(n);
+//     } else {
+//         result = n + 1;
+//         document.write(result);
+//     }
+//     return result;
+// }
+
+// printResult(n)
+
+/* Generatore di "nomi cognomi" casuali, prendendo una lista di nomi e una di 
+cognomi, Gatsby vuole generare una falsa lista di invitati */
+
+
+
+// let listName = ["Rollo", "Bjorn", "Floki", "Ivor", "Ubbe", "Ragnar"];
+// let listSurname = ["La Corazza", "Il Nero", "Il Pazzo", "Lo Storpio", "Lothbrock", "Lothbrok"];
+// let numberNameFalse = +prompt("Quanti nomi falsi vuoi ? ")
+// let falseList = [];
+
+// function generatorRandom(min, max) {
+
+//     return Math.floor(Math.random () * (max-min +1) + min );
+// }
+
+// function generatorFalseList(listName, listSurname) {
+
+//     let nameRandom = generatorRandom(0, 5); // console.log(nameRandom);
+//     let surnameRandom = generatorRandom(0, 5); // console.log(surnameRandom);
+
+//     let name = listName[nameRandom]; // console.log(name);
+//     let surname = listSurname[surnameRandom]; // console.log(surname);
+//     let number = name + " " + surname ;  // console.log(falseName);
+
+//     falseList.push(falseName);
+    
+//     return falseList;
+// }
+
+// function printFalseName(numberNameFalse) {
+
+//     for (let n = 0; n < numberNameFalse; n++) {
+        
+//         generatorFalseList(listName, listSurname) + "<br>";
+
+//     }
+// };
+
+// printFalseName(numberNameFalse);
+// document.writeln(falseList);
+
+// console.log(falseList);
+
+/* Crea un Array di numeri e fai la somma di tutti gli elementi 
+che sono in posizione dispari */
+
+
+// let numberList = [1, 2, 4, 5, 8, 7, 3];
+// let resultSumOdd= 0;
+
+// for (let n = 0; n < numberList.length; n++) {
+//     if (n % 2 == 1 ) {
+        
+//         resultSumOdd += numberList[n];
+//     }
+//     // console.log(resultSumOdd);
+    
+// }
+
+// console.log(resultSumOdd);
+
+/* Crea due array che hanno un numero di elementi diversi, Aggiungi elementi all'array
+che ha meno elementi fino a quando ne avrà tanti quanti l'altro */
+
+// let arrayOne = ["a", "b", "c", "d", "e"];
+// let arrayTwo = ["f", "g", "h"];
+// let newElement = "lettera";
+
+// function checkIndexArray(array) {
+//     let arrayIndex = array.length;
+//     return arrayIndex;
+// }
+
+// function pushElement(array, newElement) {
+//     array.push(newElement);
+//     return array;
+    
+// }
+
+// let array1 = checkIndexArray(arrayOne);
+// let array2 = checkIndexArray(arrayTwo);
+// console.log(typeof array1);
+// console.log(typeof array2);
+
+// function fullArray(a, b) {
+
+//     while (array1 > array2) {
+//         pushElement(arrayTwo, newElement);
+//         console.log(arrayTwo);
+//         array2++;
+//     }
+// }
+
+// fullArray(array1, array2);
+
+// document.writeln("Il primo Array ha " + array1 + " Elementi " + arrayOne + "<br>");
+// document.writeln("Il secondo Array ha " + array2 + " Elementi " + arrayTwo + "<br>");
+
+/* Crea un array vuoto e chiedi all'utente un numero da inserire nell'array.
+Continua a chiedere i numeri all'utente e a inserirli nell'array fino a quando la
+ somma degli elementi è minore di 50 */
+
+
+// let arrayNumber = [];
+// let sumNumber = 0;
+
+// while (sumNumber <= 50 ) {
+//     let number = +prompt("Inserisci un numero");
+//     arrayNumber.push(number);
+//     sumNumber += number;
+// }
+
+// document.writeln(arrayNumber);
+
+
