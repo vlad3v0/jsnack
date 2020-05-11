@@ -360,3 +360,92 @@ Continua a chiedere i numeri all'utente e a inserirli nell'array fino a quando l
 // document.writeln(arrayNumber);
 
 
+/* Crea un Array vuoto e chiedi all'utente un numero da inserire nell'array
+Continua a chiedere i numeri all'utente e a inserirli nell'array fino a quando
+la somma degli elementi è minore di 50 */
+
+// let arrayNumber = [];
+// let limitedNumbArray = 50;
+// let somma = 0;
+
+// let cycle = true;
+
+// while (cycle == true) {
+
+//     let number = +prompt('Inserisci un numero');
+
+//     if ( somma + number >= limitedNumbArray) {
+//         cycle = false;
+
+//     } else {
+//         arrayNumber.push(number);
+//         somma = somma + number;
+//     }
+
+//     console.log(arrayNumber);
+//     console.log('la somma è ' + somma);
+// }
+
+/* Fai inserie un numero, che chiameremo N, all'utente.
+Genera N array, ognuno formato da 10 numeri casuali da 
+1 a 100. Al termine della generazione, stampa */
+
+// let N = +prompt('Inserisci il numero di array');
+// let listArray = [];
+
+// function generatorRandom(min, max) {
+
+//     return Math.floor(Math.random () * (max-min +1) + min );
+// }
+
+// function createArray() {
+
+//     let array = [];
+//     for (let i = 0; i < 10; i++) {
+        
+//         let element = generatorRandom(1, 100);
+//         array.push(element);
+
+//     }
+//     return array;
+// }
+
+// function generateNArray(N) {
+
+//     for (let i = 0; i < N; i++) {
+//         let newArray = createArray();
+//         listArray.push(newArray);
+
+//         console.log(newArray);
+//     }
+//     return listArray;
+
+// }
+
+
+// generateNArray(N);
+
+// document.write(listArray)
+// console.log(listArray);
+
+/* Crea un array di array. L'array padre si chiamerà Studenti e
+ogni array figlio è un classe di studenti.
+Dentro ogni array figlio avremo dei nomi. Stampiamo a schermo: 
+classe 0 = Nome,Nome, Nome
+classe 1 = Nome, Nome, Nome 
+ecc */
+
+// let studenti = [];
+// let classe = [];
+// let nome = [' Nome ', ' Nome ', ' Nome '];
+
+// for (let i = 0; i < 5; i++) {
+//     studenti.push(classe);
+//     classe.push(nome);
+//     document.write("classe " + i + " : " + classe[i] + "<br>")
+    
+// }
+
+// console.log(studenti);
+
+
