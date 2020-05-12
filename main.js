@@ -448,4 +448,31 @@ ecc */
 
 // console.log(studenti);
 
+/* Dare la possibilità di inserire due parole. VErificare tramite
+una funzione che le due parole abbiano la stessa lunghezza.
+Se hanno la stessa lunghezza, stamparle entrambe altrimenti stampare la più lunga */
+
+
+// let wordUser = prompt("inserisci 2 parole");
+// console.log(wordUser);
+
+// let arrayWord = wordUser.split(' ');
+// console.log(wordUser);
+
+// console.log(arrayWord);
+
+// let firstWord = arrayWord[0];
+// let secondWord = arrayWord[1];
+
+// console.log(firstWord);
+// console.log(secondWord);
+
+// if (firstWord.length == secondWord.length) {
+//     document.writeln(firstWord + " " + secondWord)
+// } else if (firstWord.length > secondWord.length) {
+//     document.writeln(firstWord)
+
+// } else if (firstWord.length < secondWord.length) {
+//     document.writeln(secondWord)
+// }
 
