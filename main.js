@@ -476,3 +476,50 @@ Se hanno la stessa lunghezza, stamparle entrambe altrimenti stampare la più lun
 //     document.writeln(secondWord)
 // }
 
+
+/* Creare un oggetto che descriva uno studente con le seguenti propietà:
+nome, cognome e età. Stampare a schermo atraverso il for in tutte le propietà. Poi
+creare un array di oggetti studenti. Ciclare su tutti gli studeti per ognuno nome e cognome */
+let student = createStudent(); console.log(student);
+let students = [];
+
+function createStudent() {
+    
+    let name = prompt('Insert your name');
+    let surname = prompt('Insert your surname');
+    let age = prompt('Insert your age');
+    return {
+        name,
+        surname,
+        age,
+    }
+}
+
+function printStudent(student) {
+    
+    for (let key in student) {
+        document.writeln(key + ': ' + student[key] + '<br>');
+    }
+}
+
+
+function insertStudent(student) {
+    students.push(student);
+
+}
+
+function printStudents() {
+    
+    for (let count = 0; count < students.length; count++) {
+        document.writeln(student.name + ' ' +student.surname + '<br>')
+    }
+}
+printStudent(student);
+insertStudent(student);
+console.log(students);
+
+insertStudent(student);
+insertStudent(student);
+insertStudent(student);
+
+printStudents();
