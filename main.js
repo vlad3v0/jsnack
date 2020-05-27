@@ -480,46 +480,185 @@ Se hanno la stessa lunghezza, stamparle entrambe altrimenti stampare la più lun
 /* Creare un oggetto che descriva uno studente con le seguenti propietà:
 nome, cognome e età. Stampare a schermo atraverso il for in tutte le propietà. Poi
 creare un array di oggetti studenti. Ciclare su tutti gli studeti per ognuno nome e cognome */
-let student = createStudent(); console.log(student);
-let students = [];
 
-function createStudent() {
+
+
+// let student = createStudent(); console.log(student);
+// let students = [];
+
+// function createStudent() {
     
-    let name = prompt('Insert your name');
-    let surname = prompt('Insert your surname');
-    let age = prompt('Insert your age');
-    return {
-        name,
-        surname,
-        age,
-    }
-}
+//     let name = prompt('Insert your name');
+//     let surname = prompt('Insert your surname');
+//     let age = prompt('Insert your age');
+//     return {
+//         name,
+//         surname,
+//         age,
+//     }
+// }
 
-function printStudent(student) {
+// function printStudent(student) {
     
-    for (let key in student) {
-        document.writeln(key + ': ' + student[key] + '<br>');
-    }
-}
+//     for (let key in student) {
+//         document.writeln(key + ': ' + student[key] + '<br>');
+//     }
+// }
 
 
-function insertStudent(student) {
-    students.push(student);
+// function insertStudent(student) {
+//     students.push(student);
 
-}
+// }
 
-function printStudents() {
+// function printStudents() {
     
-    for (let count = 0; count < students.length; count++) {
-        document.writeln(student.name + ' ' +student.surname + '<br>')
-    }
-}
-printStudent(student);
-insertStudent(student);
-console.log(students);
+//     for (let count = 0; count < students.length; count++) {
+//         document.writeln(student.name + ' ' +student.surname + '<br>')
+//     }
+// }
+// printStudent(student);
+// insertStudent(student);
+// console.log(students);
 
-insertStudent(student);
-insertStudent(student);
-insertStudent(student);
+// insertStudent(student);
+// insertStudent(student);
+// insertStudent(student);
 
-printStudents();
+// printStudents();
+
+/* Il Software riceve in input un lungo testo e una serie di parole da censurare.
+Restituice il testo con xx al posto delle parole censurate.
+Stampa un "badword index" calcolato come il numero di parole censurate su il 
+numero di parole totali */
+
+// let text = prompt('inserisci una frase lorem ipsum');
+// let newBadWord = prompt('Inserisci una Bad Word');
+// let badWord = ['stupido', 'deficente', 'tonto', 'cretino'];
+// badWord.push(newBadWord);
+// let IndexBadWord = {
+//     'totalWord': 0,
+//     'totalBadWordCheck': 0
+// };
+
+// console.log(text);
+// console.log(badWord);
+
+// function censureText(text, badWord) {
+
+//     let wordWords = text.split(' ');
+//     console.log(wordWords);
+
+//     for (let a = 0; a < wordWords.length; a++) {
+
+//         console.log(wordWords[a]);
+    
+//         if (badWord.includes(wordWords[a])) {
+
+//             console.log('trovata');
+//             wordWords[a] = 'xxxxx';
+            
+//             IndexBadWord.totalBadWordCheck++;
+        
+//         } else {
+
+//             console.log('non trovata');
+//         }
+    
+//     }
+
+//     IndexBadWord.totalWord = wordWords.length;
+
+//     console.log(wordWords.length);
+//     console.log(IndexBadWord.totalBadWordCheck);
+    
+    
+
+//     text = wordWords.join(' ');
+//     return text;
+// }
+
+// document.writeln(censureText(text, badWord) + '<br>');
+
+// document.write('Sono state trovate ' + IndexBadWord.totalBadWordCheck + ' Bad Word ' + ' su un totale di ' + IndexBadWord.totalWord + ' parole');
+
+
+/* Creare un array di oggetti: Ogni oggetto descriverà una
+bici da corsa con le seguenti proprietà: nome e peso.
+Stampare a schermo la bici con peso minore. */
+
+// let bicycle1 = {};
+// let bicycle2 = {};
+// let bicycles = [];
+
+
+// function createBicycle() {
+    
+//     let objBicycle = {
+//         'nome': prompt('Inserisci il nome della tua bicicletta'),
+//         'peso': prompt('Quanto pesa la tua bicicletta?')
+//     };
+//     return objBicycle ;
+// }
+
+
+// function insertBicycle(a) {
+//     bicycles.push(a);
+// }
+
+// function calcHighBicycle(a,b) {
+//     if (a > b) {
+//         console.log('è pesante ! cambia bici è un consiglio');
+//     } else {
+//         console.log('bella bici ! è leggera');
+//         document.write('Il modello ' + b.nome + ' è la bici più leggera')
+//     }
+// }
+
+// bicycle1 = createBicycle();
+// bicycle2 = createBicycle();
+// // console.log(bicycle1);
+// // console.log(bicycle2);
+
+// insertBicycle(bicycle1);
+// insertBicycle(bicycle2);
+// console.log(bicycles);
+
+// calcHighBicycle(bicycle1, bicycle2);
+
+/* Creare un array di oggetti riguardanti squadre di calcio.
+Ogni squadra avrà diverse proprietà: nome, punti fatti, falli
+subiti.
+Nome sarà l’unica proprietà da compilare, le altre saranno
+tutte settate a 0. */
+
+let teamsFootball = [];
+
+const team1 =  {
+    'name': '',
+    'pointMade': 0,
+    'faultLoseOut': 0
+};
+team1.name = 'Juve';
+teamsFootball.push(team1);
+
+console.log(teamsFootball);
+
+const team2 =  {
+    'name': '',
+    'pointMade': 0,
+    'faultLoseOut': 0
+};
+team2.name = 'Milan';
+teamsFootball.push(team2);
+
+console.log(teamsFootball);
+
+
+
+
+
+
+
+
+
