@@ -630,35 +630,86 @@ Stampare a schermo la bici con peso minore. */
 Ogni squadra avrà diverse proprietà: nome, punti fatti, falli
 subiti.
 Nome sarà l’unica proprietà da compilare, le altre saranno
-tutte settate a 0. */
+tutte settate a 0. 
+Generare numeri random al posto degli 0 nelle proprietà:
+Punti fatti e falli subiti */
 
-let teamsFootball = [];
+// let teamsFootball = [];
 
-const team1 =  {
-    'name': '',
-    'pointMade': 0,
-    'faultLoseOut': 0
+// function generateRandom(min, max) {
+//     return Math.floor(Math.random () * (max-min +1) +min );
+// }
+
+// const team1 =  {
+//     'name': '',
+//     'totalPoint': generateRandom(1, 80),
+//     'faultLoseOut': generateRandom(0, 60)
+// };
+// team1.name = 'Juve';
+// teamsFootball.push(team1);
+
+// console.log(teamsFootball);
+
+// const team2 =  {
+//     'name': '',
+//     'totalPoint': generateRandom(1, 80),
+//     'faultLoseOut': generateRandom(0, 60)
+// };
+// team2.name = 'Milan';
+// teamsFootball.push(team2);
+
+// console.log(teamsFootball);
+
+/* Creare un oggetto che descriva uno studente con le
+seguenti proprietà: nome, cognome e età. Stampare a
+schermo attraverso il for in tutte le proprietà.
+Creare un array di oggetti di studenti. Ciclare su tutti gli
+studenti e stampare per ognuno nome e cognome
+Dare la possibilità all’utente attraverso 3 prompt di
+aggiungere un nuovo oggetto studente inserendo
+nell’ordine: nome, cognome e età. */
+
+let students = []
+let studente1 = {
+    'name': "Gio",
+    'surname': "Cali",
+    'age': 20
 };
-team1.name = 'Juve';
-teamsFootball.push(team1);
 
-console.log(teamsFootball);
-
-const team2 =  {
-    'name': '',
-    'pointMade': 0,
-    'faultLoseOut': 0
+let studente2 = {
+    'name': "Gina",
+    'surname': "Kovacevich",
+    'age': 21
 };
-team2.name = 'Milan';
-teamsFootball.push(team2);
 
-console.log(teamsFootball);
-
-
-
-
+let studente3 = {
+    'name': "John",
+    'surname': "Bear",
+    'age': 21
+};
 
 
+for (let key in studente1) {
+    document.writeln('key: ' + key + ' - value: ' + studente1[key] + '<br>');
+}
+students.push(studente1, studente2, studente3);
 
+console.log(students);
 
+function createStudent() {
+    let student = {
+    'name': prompt('Come Ti chiami'),
+    'surname': prompt('Qualè il tuo cognome?'),
+    'age': +prompt('Quanti anni hai?')
+    }
 
+    console.log(student);
+    return student;
+
+}
+
+let newStudent = createStudent();
+
+students.push(newStudent);
+
+console.log(students);
