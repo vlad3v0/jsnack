@@ -2,6 +2,7 @@
 000000000000 JSnack Exercise 00000000000000000000
 000000000000000000000000000000000000000000000000*/
 
+const lunganewLocal = "lunga";
 /* 1-1 - Chiedi all’utente il cognome, inseriscilo in un
 array con altri cognomi e stampa la lista
 ordinata alfabeticamente. Scrivi a che
@@ -669,47 +670,150 @@ Dare la possibilità all’utente attraverso 3 prompt di
 aggiungere un nuovo oggetto studente inserendo
 nell’ordine: nome, cognome e età. */
 
-let students = []
-let studente1 = {
-    'name': "Gio",
-    'surname': "Cali",
-    'age': 20
-};
+// let students = []
+// let studente1 = {
+//     'name': "Gio",
+//     'surname': "Cali",
+//     'age': 20
+// };
 
-let studente2 = {
-    'name': "Gina",
-    'surname': "Kovacevich",
-    'age': 21
-};
+// let studente2 = {
+//     'name': "Gina",
+//     'surname': "Kovacevich",
+//     'age': 21
+// };
 
-let studente3 = {
-    'name': "John",
-    'surname': "Bear",
-    'age': 21
-};
+// let studente3 = {
+//     'name': "John",
+//     'surname': "Bear",
+//     'age': 21
+// };
 
 
-for (let key in studente1) {
-    document.writeln('key: ' + key + ' - value: ' + studente1[key] + '<br>');
+// for (let key in studente1) {
+//     document.writeln('key: ' + key + ' - value: ' + studente1[key] + '<br>');
+// }
+// students.push(studente1, studente2, studente3);
+
+// console.log(students);
+
+// function createStudent() {
+//     let student = {
+//     'name': prompt('Come Ti chiami'),
+//     'surname': prompt('Qualè il tuo cognome?'),
+//     'age': +prompt('Quanti anni hai?')
+//     }
+
+//     console.log(student);
+//     return student;
+
+// }
+
+// let newStudent = createStudent();
+
+// students.push(newStudent);
+
+// console.log(students);
+
+/* Crea 10 oggetti che rappresentano una zucchina,
+indicandone per ognuno varietà, peso e lunghezza.
+Calcola quanto pesano tutte le zucchine. */
+
+let zucchine = [];
+let numberVeg = 10;
+let typeVeg = ['Lunga', 'Corta', 'Bianca', 'Tonda']
+
+function generateRandom(min, max) {
+    return Math.floor(Math.random() * (max-min +1) + min );
 }
-students.push(studente1, studente2, studente3);
 
-console.log(students);
+function generateRandomType(min, max) {
+    let i = Math.floor(Math.random() * (max-min +1) + min );
+    return typeVeg[i];
+}
 
-function createStudent() {
-    let student = {
-    'name': prompt('Come Ti chiami'),
-    'surname': prompt('Qualè il tuo cognome?'),
-    'age': +prompt('Quanti anni hai?')
+
+
+function createVegetables(n) {
+    for (let i = 0; i < n; i++) {
+        let zucchini = {
+            'variety': generateRandomType(0, 3),
+            'weight': generateRandom(0.1, 4),
+            'width': generateRandom(5, 20)
+        };
+
+        console.log(zucchini);
+        
+        zucchine.push(zucchini);
+
     }
-
-    console.log(student);
-    return student;
-
+    return zucchine;
 }
 
-let newStudent = createStudent();
+createVegetables(numberVeg);
 
-students.push(newStudent);
+console.log(zucchine);
 
-console.log(students);
+function sumWeightVeg() {
+    let sum = 0;
+    for (let i = 0; i < zucchine.length; i++) {
+        sum += zucchine[i].weight;
+        
+    }
+    return sum;
+}
+
+let totalWeight = sumWeightVeg();
+
+console.log(totalWeight);
+
+
+
+
+/* ^
+   |
+   |
+   |
+   |
+   V
+Crea 10 oggetti che rappresentano una zucchina.
+Dividi in due array separati le zucchine che misurano
+meno o più di 15cm.
+Infine stampa separatamente quanto pesano i due
+gruppi di zucchine */
+
+let zucchineCorte = [];
+let zucchineLunghe = [];
+// let zucchineDivise = sumWidth(zucchineCorte, zucchineLunghe);
+
+function sumWidth(a){
+    let element = 0;
+    for (let i = 0; i < a.length; i++) {
+        element += a[i];
+    };
+    return element;
+}
+
+function chekSeparateWeight(array) {
+    for (let a = 0; a < array.length; a++) {
+        let zucchina = zucchine[a];
+        if (zucchina.width < 15) {
+            zucchineCorte.push(zucchina.width);
+            console.log('zuk pic ' + zucchina.width);
+        } else {
+            zucchineLunghe.push(zucchina.width);
+            console.log('zuk grande ' + zucchina.width);
+        }
+    }
+}
+
+chekSeparateWeight(zucchine);
+console.log(zucchineCorte);
+console.log(zucchineLunghe);
+
+
+let sumZukCorte = sumWidth(zucchineCorte);
+let sumZukLunghe = sumWidth(zucchineLunghe);
+
+console.log(sumZukCorte);
+console.log(sumZukLunghe);
