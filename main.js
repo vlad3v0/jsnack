@@ -719,53 +719,53 @@ nell’ordine: nome, cognome e età. */
 indicandone per ognuno varietà, peso e lunghezza.
 Calcola quanto pesano tutte le zucchine. */
 
-let zucchine = [];
-let numberVeg = 10;
-let typeVeg = ['Lunga', 'Corta', 'Bianca', 'Tonda']
+// let zucchine = [];
+// let numberVeg = 10;
+// let typeVeg = ['Lunga', 'Corta', 'Bianca', 'Tonda']
 
-function generateRandom(min, max) {
-    return Math.floor(Math.random() * (max-min +1) + min );
-}
+// function generateRandom(min, max) {
+//     return Math.floor(Math.random() * (max-min +1) + min );
+// }
 
-function generateRandomType(min, max) {
-    let i = Math.floor(Math.random() * (max-min +1) + min );
-    return typeVeg[i];
-}
+// function generateRandomType(min, max) {
+//     let i = Math.floor(Math.random() * (max-min +1) + min );
+//     return typeVeg[i];
+// }
 
 
 
-function createVegetables(n) {
-    for (let i = 0; i < n; i++) {
-        let zucchini = {
-            'variety': generateRandomType(0, 3),
-            'weight': generateRandom(0.1, 4),
-            'width': generateRandom(5, 20)
-        };
+// function createVegetables(n) {
+//     for (let i = 0; i < n; i++) {
+//         let zucchini = {
+//             'variety': generateRandomType(0, 3),
+//             'weight': generateRandom(0.1, 4),
+//             'width': generateRandom(5, 20)
+//         };
 
-        console.log(zucchini);
+//         console.log(zucchini);
         
-        zucchine.push(zucchini);
+//         zucchine.push(zucchini);
 
-    }
-    return zucchine;
-}
+//     }
+//     return zucchine;
+// }
 
-createVegetables(numberVeg);
+// createVegetables(numberVeg);
 
-console.log(zucchine);
+// console.log(zucchine);
 
-function sumWeightVeg() {
-    let sum = 0;
-    for (let i = 0; i < zucchine.length; i++) {
-        sum += zucchine[i].weight;
+// function sumWeightVeg() {
+//     let sum = 0;
+//     for (let i = 0; i < zucchine.length; i++) {
+//         sum += zucchine[i].weight;
         
-    }
-    return sum;
-}
+//     }
+//     return sum;
+// }
 
-let totalWeight = sumWeightVeg();
+// let totalWeight = sumWeightVeg();
 
-console.log(totalWeight);
+// console.log(totalWeight);
 
 
 
@@ -782,38 +782,90 @@ meno o più di 15cm.
 Infine stampa separatamente quanto pesano i due
 gruppi di zucchine */
 
-let zucchineCorte = [];
-let zucchineLunghe = [];
-// let zucchineDivise = sumWidth(zucchineCorte, zucchineLunghe);
+// let zucchineCorte = [];
+// let zucchineLunghe = [];
+// // let zucchineDivise = sumWidth(zucchineCorte, zucchineLunghe);
 
-function sumWidth(a){
-    let element = 0;
-    for (let i = 0; i < a.length; i++) {
-        element += a[i];
-    };
-    return element;
+// function sumWidth(a){
+//     let element = 0;
+//     for (let i = 0; i < a.length; i++) {
+//         element += a[i];
+//     };
+//     return element;
+// }
+
+// function chekSeparateWeight(array) {
+//     for (let a = 0; a < array.length; a++) {
+//         let zucchina = zucchine[a];
+//         if (zucchina.width < 15) {
+//             zucchineCorte.push(zucchina.width);
+//             console.log('zuk pic ' + zucchina.width);
+//         } else {
+//             zucchineLunghe.push(zucchina.width);
+//             console.log('zuk grande ' + zucchina.width);
+//         }
+//     }
+// }
+
+// chekSeparateWeight(zucchine);
+// console.log(zucchineCorte);
+// console.log(zucchineLunghe);
+
+
+// let sumZukCorte = sumWidth(zucchineCorte);
+// let sumZukLunghe = sumWidth(zucchineLunghe);
+
+// console.log(sumZukCorte);
+// console.log(sumZukLunghe);
+
+
+/* 
+Un oggetto rappresenta una finestra di un browser e contiene due
+campi: un array di tab aperte, e un numero che indica l’indice della tab
+aperta nell’array
+{
+“Tab” : [“Facebook”, “GitHub”, “Gmail”],
+“Active_tab” : 0
+}
+Il software deve guardare se c’è un social aperto e eliminarlo dalle tab ,
+nel caso la tab fosse attiva, deve attivare la successiva
+
+*/
+let tabActive = "Youtube";
+let windowBrowser = {
+    "tab" : ["Facebook", "GitHub", "Gmail"],
+    "active_tab" : 0
 }
 
-function chekSeparateWeight(array) {
-    for (let a = 0; a < array.length; a++) {
-        let zucchina = zucchine[a];
-        if (zucchina.width < 15) {
-            zucchineCorte.push(zucchina.width);
-            console.log('zuk pic ' + zucchina.width);
+console.log(windowBrowser);
+
+function checkActiveTab(windowBrowser, tabActive) {
+
+    console.log(windowBrowser.tab);
+    console.log(tabActive);
+    // console.log(windowBrowser);
+
+    for (let i = 0; i < windowBrowser.tab.length; i++) {
+
+        
+        if (tabActive == windowBrowser.tab[i]) {
+            console.log('trovata una tab aperta ' + 'la tab aperta è ' + windowBrowser.tab[i]);
+
+            windowBrowser.tab.splice(i, 1);
+            windowBrowser.active_tab = 1;
+            document.writeln("Hey! stata trovata una scheda attiva")
+
         } else {
-            zucchineLunghe.push(zucchina.width);
-            console.log('zuk grande ' + zucchina.width);
+            console.log('non funziona ');
         }
+    }
+    if (windowBrowser.active_tab == 0) {
+
+        document.writeln("Non è stata trovata una scheda attiva")
+
     }
 }
 
-chekSeparateWeight(zucchine);
-console.log(zucchineCorte);
-console.log(zucchineLunghe);
+checkActiveTab(windowBrowser, tabActive);
 
-
-let sumZukCorte = sumWidth(zucchineCorte);
-let sumZukLunghe = sumWidth(zucchineLunghe);
-
-console.log(sumZukCorte);
-console.log(sumZukLunghe);
+console.log(windowBrowser);
