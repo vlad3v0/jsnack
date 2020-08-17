@@ -2,7 +2,7 @@
 000000000000 JSnack Exercise 00000000000000000000
 000000000000000000000000000000000000000000000000*/
 
-const lunganewLocal = "lunga";
+/* const lunganewLocal = "lunga";
 /* 1-1 - Chiedi all’utente il cognome, inseriscilo in un
 array con altri cognomi e stampa la lista
 ordinata alfabeticamente. Scrivi a che
@@ -831,41 +831,71 @@ Il software deve guardare se c’è un social aperto e eliminarlo dalle tab ,
 nel caso la tab fosse attiva, deve attivare la successiva
 
 */
-let tabActive = "Youtube";
-let windowBrowser = {
-    "tab" : ["Facebook", "GitHub", "Gmail"],
-    "active_tab" : 0
-}
+// let tabActive = "Youtube";
+// let windowBrowser = {
+//     "tab" : ["Facebook", "GitHub", "Gmail"],
+//     "active_tab" : 0
+// }
 
-console.log(windowBrowser);
+// console.log(windowBrowser);
 
-function checkActiveTab(windowBrowser, tabActive) {
+// function checkActiveTab(windowBrowser, tabActive) {
 
-    console.log(windowBrowser.tab);
-    console.log(tabActive);
-    // console.log(windowBrowser);
+//     console.log(windowBrowser.tab);
+//     console.log(tabActive);
+//     // console.log(windowBrowser);
 
-    for (let i = 0; i < windowBrowser.tab.length; i++) {
+//     for (let i = 0; i < windowBrowser.tab.length; i++) {
 
         
-        if (tabActive == windowBrowser.tab[i]) {
-            console.log('trovata una tab aperta ' + 'la tab aperta è ' + windowBrowser.tab[i]);
+//         if (tabActive == windowBrowser.tab[i]) {
+//             console.log('trovata una tab aperta ' + 'la tab aperta è ' + windowBrowser.tab[i]);
 
-            windowBrowser.tab.splice(i, 1);
-            windowBrowser.active_tab = 1;
-            document.writeln("Hey! stata trovata una scheda attiva")
+//             windowBrowser.tab.splice(i, 1);
+//             windowBrowser.active_tab = 1;
+//             document.writeln("Hey! stata trovata una scheda attiva")
 
-        } else {
-            console.log('non funziona ');
-        }
-    }
-    if (windowBrowser.active_tab == 0) {
+//         } else {
+//             console.log('non funziona ');
+//         }
+//     }
+//     if (windowBrowser.active_tab == 0) {
 
-        document.writeln("Non è stata trovata una scheda attiva")
+//         document.writeln("Non è stata trovata una scheda attiva")
 
-    }
-}
+//     }
+// }
 
-checkActiveTab(windowBrowser, tabActive);
+// checkActiveTab(windowBrowser, tabActive);
 
-console.log(windowBrowser);
+// console.log(windowBrowser);
+
+
+/* ^
+   |
+   |
+   |
+   |
+   V
+Si scriva una funziona che accetti una stringa come argomento e la
+ritorna girata (es. Ciao -> oaiC) */
+
+let stringa = prompt('Inserisci una parola');
+
+function reverseString(stringa) {
+
+    stringaDaRigirare = stringa.split("");
+    console.log(stringaDaRigirare);
+
+    stringaDaRigirare.reverse();
+    console.log(stringaDaRigirare);
+
+    resultStringaReverse = stringaDaRigirare.join("")
+    console.log(resultStringaReverse);
+
+    return resultStringaReverse;
+};
+
+let stringaReverse = reverseString(stringa);
+
+console.log("La parola rigirata è " + stringaReverse);
