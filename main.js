@@ -880,22 +880,50 @@ nel caso la tab fosse attiva, deve attivare la successiva
 Si scriva una funziona che accetti una stringa come argomento e la
 ritorna girata (es. Ciao -> oaiC) */
 
-let stringa = prompt('Inserisci una parola');
+// let stringa = prompt('Inserisci una parola');
 
-function reverseString(stringa) {
+// function reverseString(stringa) {
 
-    stringaDaRigirare = stringa.split("");
-    console.log(stringaDaRigirare);
+//     stringaDaRigirare = stringa.split("");
+//     console.log(stringaDaRigirare);
 
-    stringaDaRigirare.reverse();
-    console.log(stringaDaRigirare);
+//     stringaDaRigirare.reverse();
+//     console.log(stringaDaRigirare);
 
-    resultStringaReverse = stringaDaRigirare.join("")
-    console.log(resultStringaReverse);
+//     resultStringaReverse = stringaDaRigirare.join("")
+//     console.log(resultStringaReverse);
 
-    return resultStringaReverse;
-};
+//     return resultStringaReverse;
+// };
 
-let stringaReverse = reverseString(stringa);
+// let stringaReverse = reverseString(stringa);
 
-console.log("La parola rigirata è " + stringaReverse);
+// console.log("La parola rigirata è " + stringaReverse);
+
+
+
+/* ^
+   |
+   |
+   |
+   |
+   V
+Scrivi una funzione che fonda due array prendendo alternativamente gli
+elementi da uno e dall’altro es. [a,b,c], [1,2,3] → [a,1,b,2,c,3]. */
+
+let arr1 = [1, 2, 3, 4];
+let arr2 = ['a', 'b', 'c', 'd'];
+let arrResult = [];
+
+function concatArray(arr1, arr2) {
+   
+   for (let index = 0; index < arr1.length; index++) {
+
+     arrResult = arrResult.concat(arr2[index], arr1[index]);
+      
+   };
+
+   return arrResult;
+}
+
+console.log(concatArray(arr1, arr2));
