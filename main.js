@@ -911,19 +911,48 @@ ritorna girata (es. Ciao -> oaiC) */
 Scrivi una funzione che fonda due array prendendo alternativamente gli
 elementi da uno e dall’altro es. [a,b,c], [1,2,3] → [a,1,b,2,c,3]. */
 
-let arr1 = [1, 2, 3, 4];
-let arr2 = ['a', 'b', 'c', 'd'];
-let arrResult = [];
+// let arr1 = [1, 2, 3, 4];
+// let arr2 = ['a', 'b', 'c', 'd'];
+// let arrResult = [];
 
-function concatArray(arr1, arr2) {
+// function concatArray(arr1, arr2) {
    
-   for (let index = 0; index < arr1.length; index++) {
+//    for (let index = 0; index < arr1.length; index++) {
 
-     arrResult = arrResult.concat(arr2[index], arr1[index]);
+//      arrResult = arrResult.concat(arr2[index], arr1[index]);
       
-   };
+//    };
 
-   return arrResult;
-}
+//    return arrResult;
+// }
 
-console.log(concatArray(arr1, arr2));
+// console.log(concatArray(arr1, arr2));
+
+
+/* ^
+   |
+   |
+   |
+   |
+   V
+Si scriva una funzione che accetta tre argomenti, un array e due numeri.
+La funzione ritornerà il numero di elementi all’interno dell’array compresi
+tra i due numeri */
+
+// let arrayDiNumeri = [1,2,3,4,5,6,7,8,9,0];
+// let numeroA = 3;
+// let numeroB = 5;
+
+// function numeroElementiTraIntervalli(arrayDiNumeri, numeroA, numeroB) {
+   
+//    let intervalloNumeri;
+//    intervalloNumeri = arrayDiNumeri.slice(numeroA, numeroB)
+//    console.log(intervalloNumeri);
+
+//    let counter = intervalloNumeri.length;
+
+//    console.log('il numero di elementi al\'interno dell intervallo è ' + counter);
+// }
+
+// numeroElementiTraIntervalli(arrayDiNumeri, numeroA, numeroB); 
+
