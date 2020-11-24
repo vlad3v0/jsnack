@@ -956,3 +956,66 @@ tra i due numeri */
 
 // numeroElementiTraIntervalli(arrayDiNumeri, numeroA, numeroB); 
 
+
+
+/* Basket
+ESERCITAZIONE
+*Basket*
+Il software deve generare casualmente le statistiche di gioco di
+100 giocatori di basket per una giornata di campionato.
+In particolare vanno generate per ogni giocatore le seguenti
+informazioni, facendo attenzione che il numero generato abbia
+senso:
+-
+Codice Giocatore Univoco (formato da 3 lettere
+maiuscole casuali e 3 numeri)
+-
+Numero di punti fatti
+-
+Numero di rimbalzi
+-
+Falli
+-
+Percentuale di successo per tiri da 2 punti
+-
+Percentuale di successo per da 3 punti
+Una volta generato il “database”, il programma deve chiedere
+all’utente di inserire un Codice Giocatore e il programma
+restituisce le statistiche. */
+
+let databasePlayer = [];
+
+let player = {
+   "id": generateID(),
+   "point": 0,
+   "rimbalzi": 0,
+   "fault": 0,
+   "2-poin-success-rate ": 0,
+   "3-poin-success-rate ": 0,
+};
+
+console.log(databasePlayer);
+console.log(player);
+
+
+function randomNumber(max, min) {
+   let number = Math.floor((Math.random() * (max - min)) + min);
+   return number;
+};
+
+function generateID() {
+
+   let numberid = randomNumber(999, 100);
+   
+   let letterid = "";
+
+   for (let index = 0; index < 3; index++) {
+
+      let stringAlphabet = "ABCDEFGHILMNOPQRSTUVZ";
+      let numberLetter = randomNumber(21,1);
+      letterid += stringAlphabet.charAt(numberLetter);
+      
+   };
+
+   return numberid + letterid
+};
