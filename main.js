@@ -983,7 +983,8 @@ Una volta generato il “database”, il programma deve chiedere
 all’utente di inserire un Codice Giocatore e il programma
 restituisce le statistiche. */
 
-let databasePlayer = ['example'];
+let databasePlayer = [{id: '001EXE', point: 39, rimbalzi: 85, fault: 12, puntidadue: "16%",puntidatre: "73%"},
+                     {id: "002EXE", point: 26, rimbalzi: 51, fault: 0, puntidadue: "73%", puntidatre: "31%"}];
 
 // console.log(databasePlayer);S
 // console.log(player);
@@ -993,29 +994,6 @@ function randomNumber(max, min) {
    return number;
 };
 
-// /* --------- FUNZIONE CHE GENERA ID UNIVOCO PLAYER --------*/
-
-// function generateID() {
-
-//    let numberid = "";
-//    let letterid = "";
-
-//    for (let index = 0; index < 3; index++) {
-
-//       let stringAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-//       let stringNumber = "123456789"
-//       let numberLetter = randomNumber(26,1);
-//       let number = randomNumber(0, 9);
-
-//       letterid += stringAlphabet.charAt(numberLetter);
-//       numberid += stringNumber.charAt(number);
-//    };
-   
-//    let playerId =  numberid + letterid;
-
-//    return playerId;
-
-// };
 
 /* --------- FUNZIONE CHE GENERA ID UNIVOCO PLAYER --------*/
 
@@ -1033,8 +1011,8 @@ function generateNewPlayer(database, numberPlayers) {
          let stringLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
          let numberLetter = randomNumber(26,1);
 
-         let stringNumber = "123456789"
-         let number = randomNumber(0, 3);
+         let stringNumber = "0123456789"
+         let number = randomNumber(0, 9);
 
          letterid += stringLetter.charAt(numberLetter);
          numberid += stringNumber.charAt(number);
@@ -1070,8 +1048,10 @@ function generateNewPlayer(database, numberPlayers) {
             });
 
          } else {
-         
-      }
+         console.log('id uguale');
+      };
+
+      console.log(databasePlayer[i].id);
 
    };
 
@@ -1082,19 +1062,29 @@ function generateNewPlayer(database, numberPlayers) {
 
 /* --------- FUNZIONE RICERCA PLAYER ALL'INTERNO DEL DATABASE --------*/
 
-function searchPlayer() {
+function searchPlayerPrint() {
 
    console.log(databasePlayer);
 
    for (let index = 0; index < databasePlayer.length; index++) {
 
-      if (search === databasePlayer[index].id) {
+      if (idPlayer === databasePlayer[index].id) {
 
-         console.log('id valido');
+         console.log(databasePlayer[index].id + ' id valido ');
+         console.log(databasePlayer[index]);
+
+         document.writeln(
+            'ID player: ' + databasePlayer[index].id + '<br>' + 
+            'point : ' + databasePlayer[index].point + '<br>' + 
+            'rimbalzi : ' + databasePlayer[index].rimbalzi + '<br>' +
+            'falli : ' + databasePlayer[index].fault + '<br>' +
+            'punti da 2 : ' + databasePlayer[index].puntidadue + '<br>' +
+            'punti da 3 : ' + databasePlayer[index].puntidatre + '<br>'
+            );
 
       } else {
 
-         console.log('id non trovato');
+         console.log(databasePlayer[index].id + ' id non trovato ');
 
       };
    };
@@ -1102,14 +1092,15 @@ function searchPlayer() {
 };
 
 
+generateNewPlayer(databasePlayer, 20);
+console.log(databasePlayer);
+
+
 function getIdSearch() {
    return prompt('inserisci un ID valido composto da 3 numeri e 3 lettere').toLocaleUpperCase();
 };
 
-generateNewPlayer(databasePlayer, 100);
-console.log(databasePlayer);
+let idPlayer = getIdSearch();
+console.log(idPlayer);
 
-let search = getIdSearch();
-
-searchPlayer(search, databasePlayer);
-
+searchPlayerPrint(idPlayer, databasePlayer);
