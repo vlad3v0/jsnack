@@ -1058,8 +1058,132 @@ restituisce le statistiche. */
 //    // console.log(database);
 //    return database;
 // }
+<<<<<<< HEAD
+=======
 
 
+// /* --------- FUNZIONE RICERCA PLAYER ALL'INTERNO DEL DATABASE --------*/
+
+// function searchPlayerPrint() {
+
+//    console.log(databasePlayer);
+
+//    for (let index = 0; index < databasePlayer.length; index++) {
+
+//       if (idPlayer === databasePlayer[index].id) {
+
+//          console.log(databasePlayer[index].id + ' id valido ');
+//          console.log(databasePlayer[index]);
+
+//          document.writeln(
+//             'ID player: ' + databasePlayer[index].id + '<br>' + 
+//             'point : ' + databasePlayer[index].point + '<br>' + 
+//             'rimbalzi : ' + databasePlayer[index].rimbalzi + '<br>' +
+//             'falli : ' + databasePlayer[index].fault + '<br>' +
+//             'punti da 2 : ' + databasePlayer[index].puntidadue + '<br>' +
+//             'punti da 3 : ' + databasePlayer[index].puntidatre + '<br>'
+//             );
+
+//       } else {
+
+//          console.log(databasePlayer[index].id + ' id non trovato ');
+
+//       };
+//    };
+
+// };
+
+
+// generateNewPlayer(databasePlayer, 20);
+// console.log(databasePlayer);
+
+
+// function getIdSearch() {
+//    return prompt('inserisci un ID valido composto da 3 numeri e 3 lettere').toLocaleUpperCase();
+// };
+
+// let idPlayer = getIdSearch();
+// console.log(idPlayer);
+
+// searchPlayerPrint(idPlayer, databasePlayer);
+
+
+/*  
+Il programma chiede all’utente quanti secondi mancano alla
+cottura della pasta.
+Dopo il tempo indicato, appare un alert()
+*/
+
+// let timeCookingPasta = prompt('Quanti secondi mancano alla cottura della pasta?');
+
+// setTimeout(myFunction, timeCookingPasta);
+
+// function myFunction() {
+//    alert('Hey la pasta e\' cotta ');
+// }
+
+
+/*  
+Simulare un countdown di 10 secondi che alla fine
+dice buon anno!
+*/
+
+// let timerNewYear = 10;
+
+// let timer = setInterval(() => {
+//    let num = timerNewYear;
+//    let message = ' - ' + num;
+//    if (num == 0) {
+//       message = num;
+//       console.log(message);
+//       clearTimeout(timer);
+//       console.log('Happy New Year !!!!');
+//    } else {
+//       console.log(message);
+//       timerNewYear = num - 1;
+//    }
+   
+// }, 1000);
+
+
+
+/*  
+Un alert espone 5 numeri casuali. Da li parte un
+timer di 30 secondi.
+Dopo 30 secondi l'utente deve inserire un prompt
+alla volta i numeri che ha visto precedentemente.
+Dopo che sono stati inseriti i 5 numeri, il software
+dice quanti e quali dei numeri da indovinare sono
+stati individuati
+*/
+
+// function numberRandom() {
+//    return Math.floor(Math.random () * (20-1 +1) +1 );
+   
+// };
+
+
+// let num1 = numberRandom();
+// let num2 = numberRandom();
+// let num3 = numberRandom();
+// let num4 = numberRandom();
+// let num5 = numberRandom();
+
+// let arrayNumber = [];
+// let arrayNumberToCheck = [];
+// let arrayNumberTrovati = [];
+
+// arrayNumberToCheck.push(num1);
+// arrayNumberToCheck.push(num2);
+// arrayNumberToCheck.push(num3);
+// arrayNumberToCheck.push(num4);
+// arrayNumberToCheck.push(num5);
+>>>>>>> 3ba5d5e4f7b0bf78a747d4818a69e7be8a4fb3ac
+
+// console.log(arrayNumber);
+// console.log(arrayNumberToCheck);
+
+<<<<<<< HEAD
 // /* --------- FUNZIONE RICERCA PLAYER ALL'INTERNO DEL DATABASE --------*/
 
 // function searchPlayerPrint() {
@@ -1185,6 +1309,12 @@ stati individuati
 //    alert(" Ciao Amico hai 5 secondi per memorizzare questi numeri " + '    ' + num1 + ' ' + num2 + ' ' + num3 + ' ' + num4 + ' ' + num5 + ' ');
 //    let second = 5;
 //    let timer = setInterval(() => {
+=======
+// function playGame() {
+
+//    alert(" Ciao Amico hai 5 secondi per memorizzare questi numeri " + '    ' + num1 + ' ' + num2 + ' ' + num3 + ' ' + num4 + ' ' + num5 + ' ');
+//    let second = 5;
+//    let timer = setInterval(() => {
 
 //       let num = second;
 //       let message = ' - ' + num;
@@ -1192,6 +1322,141 @@ stati individuati
 //          message = num;
 //          console.log(message);
 
+//          clearTimeout(timer);
+//          console.log('tempo scaduto');
+
+
+//       } else {
+         
+//          console.log(message);
+//          second = num - 1;
+//       }
+      
+//    }, 1000)
+
+//    return;
+   
+// };
+
+// function calcResult(arr, b) {
+   
+//    for (let a = 0; a < arrayNumber.length; a++) {
+
+//       if (arr[a] == b[a]) {
+         
+//          arrayNumberTrovati.push(arrayNumberToCheck[a]);
+
+//          console.log('elemento trovato');
+
+//       } else {
+
+//          console.log('elemento non trovato');
+//       }
+      
+//    };
+
+//    return;
+
+// };
+
+// playGame();
+
+// setTimeout(() => {
+
+//    let num1Result = +prompt('Quale\' il primo?');
+//    arrayNumber.push(num1Result);
+//    // console.log(arrayNumber[0]);
+
+//    let num2Result = +prompt('Quale\' il secondo?');
+//    arrayNumber.push(num2Result);
+//    // console.log(arrayNumber[1]);
+
+//    let num3Result = +prompt('Quale\' il terzo?');
+//    arrayNumber.push(num3Result);
+
+//    let num4Result = +prompt('Quale\' il quarto?');
+//    arrayNumber.push(num4Result);
+
+//    let num5Result = +prompt('Quale\' il quinto?');
+//    arrayNumber.push(num5Result);
+
+
+//    calcResult(arrayNumber, arrayNumberToCheck);
+
+//    let count = arrayNumberTrovati.length;
+//    document.write('<br>' + ' Hai trovato ' + count + ' numeri');
+
+//    document.write('<br>' + ' Questi sono i numeri trovati ' + arrayNumberTrovati.join( ' - ' ));
+
+//    console.log(arrayNumberTrovati);
+
+// }, 6000);
+
+// console.log(arrayNumber);
+// console.log(arrayNumberToCheck);
+
+/* Ciao Visitatore!
+Imposta il nome di colore rosso in vari modi:
+●
+Solo con HTML+CSS
+●
+Aggiungendo la classe con JS
+●
+Scrivendo su element.style */
+
+// let nome = prompt(' Come ti chiami ? ');
+// let sesso = prompt(' Sei maschio o femmina');
+// let name = document.getElementById("name");
+// let sesso = document.getElementById("sesso");
+
+// function generatorRandom(min, max) {
+
+//    return Math.floor(Math.random () * (max-min +1) + min );
+// };
+
+// let saluto = document.getElementById("saluto");
+// let bottone_saluto = document.getElementById("bottone_saluto");
+
+// function getSaluto(elemento) {
+
+//    console.log(elemento);
+
+//    elemento.innerHTML = ' Ciao ' + nome;
+   
+//    if (sesso == 'maschio') {
+      
+//       elemento.style.color = "blue";
+      
+//    } else if (sesso == 'femmina') {
+//       elemento.style.color = "pink";
+//    };
+
+//    return 
+
+// };
+
+// function button_click() {
+
+//    alert('Ciao ' + nome);
+
+//    return
+// };
+
+// function casual() {
+//    let ncasual = generatorRandom(1,100);
+//    let saluto = alert('Ciao ' + ncasual);
+
+//    return saluto
+// }
+>>>>>>> 3ba5d5e4f7b0bf78a747d4818a69e7be8a4fb3ac
+
+//       let num = second;
+//       let message = ' - ' + num;
+//       if (num == 0) {
+//          message = num;
+//          console.log(message);
+
+<<<<<<< HEAD
 //          clearTimeout(timer);
 //          console.log('tempo scaduto');
 
@@ -1308,3 +1573,15 @@ function button_click() {
 button_saluto.addEventListener('click', button_click);
 
 getSaluto(saluto);
+=======
+
+
+// bottone_saluto.addEventListener('click', button_click);
+// bottone_saluto.addEventListener('click', casual);
+
+
+ /* Data una struttura html selezionare gli elementi
+indicati e applicare loro una class con addClass */
+$('p.saluto').addClass('changeColor');
+$('#bottone_saluto').click();
+>>>>>>> 3ba5d5e4f7b0bf78a747d4818a69e7be8a4fb3ac
